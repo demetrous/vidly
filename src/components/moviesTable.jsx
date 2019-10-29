@@ -4,7 +4,7 @@ import Table from "./common/table";
 
 class MoviesTable extends Component {
   columns = [
-    { path: "title", label: "Title" },
+    { path: "title", label: "Title1" },
     { path: "genre.name", label: "Genre" },
     { path: "numberInStock", label: "Stock" },
     { path: "dailyRentalRate", label: "Rate" },
