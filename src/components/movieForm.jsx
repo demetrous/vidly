@@ -65,10 +65,9 @@ class MovieForm extends Form {
   };
 
   render() {
-    const { match, history } = this.props;
     return (
       <div>
-        <h1>Movie Form {match.params.id}</h1>
+        <h1>Movie Form </h1>
         <form onSubmit={this.handleSubmit}>
           {this.renderInput("title", "Title")}
           {this.renderSelect("genreId", "Genre", this.state.genres)}
@@ -82,19 +81,3 @@ class MovieForm extends Form {
 }
 
 export default MovieForm;
-
-// const MovieForm = ({ match, history }) => {
-//   return (
-//     <div>
-//       <h1>Movie Form {match.params.id}</h1>
-//       <button
-//         className="btn btn-primary"
-//         onClick={() => history.push("/movies")}
-//       >
-//         Save
-//       </button>
-//     </div>
-//   );
-// };
-
-// export default MovieForm;
