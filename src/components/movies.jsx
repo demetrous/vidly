@@ -114,7 +114,7 @@ class Movies extends Component {
     const { length: count } = this.state.movies;
     const { pageSize, currentPage, sortColumn, searchQuery } = this.state;
     const { user } = this.props;
-
+    console.log(user);
     if (count === 0) return <p>There are no movies in the database.</p>;
 
     const { totalCount, data: movies } = this.getPagedData();
@@ -149,6 +149,7 @@ class Movies extends Component {
           <SearchBox value={searchQuery} onChange={this.handleSearch} />
           <MoviesTable
             movies={movies}
+            user={user}
             sortColumn={sortColumn}
             onLike={this.handleLike}
             onDelete={this.handleDelete}
